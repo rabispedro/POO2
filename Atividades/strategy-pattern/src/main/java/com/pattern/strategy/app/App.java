@@ -3,6 +3,7 @@ package com.pattern.strategy.app;
 import com.pattern.strategy.ConcreteContexts.Personagem01;
 import com.pattern.strategy.ConcreteContexts.Personagem02;
 import com.pattern.strategy.ConcreteContexts.Personagem03;
+import com.pattern.strategy.ConcreteStrategies.AtaqueForte;
 
 /**
 	*	Programação Orientada à Objetos 2 - Atividade 01 (Padrão Strategy)
@@ -10,6 +11,7 @@ import com.pattern.strategy.ConcreteContexts.Personagem03;
 	*	Matrícula: 11811BCC024
 */
 public class App {
+	
 	public static void main( String[] args ) {
 		System.out.printf("Programação Orientada à Objetos 2 - Atividade 01 (Padrão Strategy)\n\n");
 
@@ -20,6 +22,7 @@ public class App {
 		Personagem03 personagem03 = new Personagem03();
 
 		System.out.printf("PERSONAGEM 01\n\n");
+		personagem02.setAtaque(new AtaqueForte());
 		personagem01.atacar();
 		personagem01.correr();
 		personagem01.pular();

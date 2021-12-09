@@ -10,6 +10,7 @@ import com.strategy.ConcreteStrategies.AtaqueFraco;
  *
  */
 public class App {
+	
 	public static void main( String[] args ) {
 		System.out.printf("Programação Orientada à Objetos 2 - Padrão Strategy\n\n");
 
