@@ -1,0 +1,50 @@
+Exercício: Tente descrever resumidamente cada princípio e a principal motivação para seu uso (benefícios) no desenvolvimento OO.
+
+1) DRY (Dont Repeat Yourself):	Utilização de abstração para reduzir códigos duplicados à um único local.
+-	Evita repetição de código;
+-	Utilização de "public final constant" para valores utilizados mais que uma vez;
+-	Manutenção mais fácil.
+
+2) Encapsulate What Changes:	Encapsulamento do código que será esperado de mudar no futuro.
+-	Facilidade em testar e dar manutenção ao código bem emcapsulado;
+-	Esconde detalhes de implementação;
+-	Flexibilidade ao introduzir novos códigos sem impactar no código existente.
+
+3) Open Closed Design Principle:	Classes, Métodos e/ou Funções devem ser Abertos (Open) para extenções [de novas funcionalidades] e Fechados (Closed) para modificações;
+-	Classes altamente extensíveis;
+-	Se está apenas adicionando uma nova funcionaldiade, então apenas este código deverá ser testado.
+
+4) Single Responsability Principle (SRP):	Não deverá existir mais de uma razão para uma Classe mudar. Uma Classe deve sempre ser responsável por uma única responsabilidade
+-	Facilidade nos testes;
+-	Menor quebra de código antigo ou já em ambiente de produção.
+
+5) Dependencyy Injection or Inversion Principle:	Não requisite dependências, pois estas devem ser providas pelo Framework.
+-	Facilidade de realizar testes;
+-	Facilidade em fazer objetos MOCK;
+-	Facilidade em manutenção.
+
+6) Favor Composition Over Inheritance:	Sempre opte por Composição a Herança, pois está é mais flexível.
+-	Maior flexibilidade no código;
+-	Permite a mudança de comportamento de uma Classe em tempo de execução por mudanças de propriedades durante o tempo de execução;
+-	Usando Interfaces para compor uma Classe, usa-se Polimorfismo, que prove flexibilidade para a troca por uma melhor implementação a qualquer tempo.
+
+7) Liskov Substitution Principle (LSP):	Subtipos precisam ser substituíveis por Supertipos, como Métodos ou Funções que usam a Super Classe precisam ser aptas a trabalharem com o Objeto da Subclasse sem nenhum problema;
+-	Evita que as Classes tenham mais que uma funcionalidade;
+-	Sub Classes herdam funcionalidades, mas não as reduz.
+
+8) Interface Segregation Principle (ISP):	Um Cliente não deve implementar uma Interface se não for usá-la.
+-	Evita Interfaces monolíticas, diminuindo as dificuldades do lado do Cliente;
+-	Ter menos funcionalidade implica em ter menos Métodos a serem implementados, o que reduz a quebra de código.
+
+9) Programming For Interface Nor Implementation:	Sempre programe para a Interface e não para a Aplicação. Use tipos de Interface em variáveis, retorne tipos de Método e/ou receba Argumentos do tipo de Métodos.
+-	Melhora a manutenção do código;
+-	Leva à um código flexível que pode trabalhar com qualquer implementação de Interface.
+
+10) Delegation Principle:	Não faça tudo por si mesmo, delegue para as Classes respectivas.
+-	Evita duplicação de código;
+-	Comportamento do programa altamente modificável.
+
+11) Keep It Simple and Stupid (KISS):	Mantenha o código simples e legível à humanos.
+-	Código legível;
+-	Funções pequenas.
+
