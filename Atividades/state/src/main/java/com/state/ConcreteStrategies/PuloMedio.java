@@ -1,6 +1,6 @@
-package com.pattern.strategy.ConcreteStrategies;
+package com.state.ConcreteStrategies;
 
-import com.pattern.strategy.Strategy.Pulo;
+import com.state.Strategy.Pulo;
 
 //	Implementação do Pulo
 public class PuloMedio extends Pulo {

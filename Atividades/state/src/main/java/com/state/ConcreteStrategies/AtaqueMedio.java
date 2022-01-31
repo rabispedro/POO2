@@ -1,6 +1,6 @@
-package com.pattern.strategy.ConcreteStrategies;
+package com.state.ConcreteStrategies;
 
-import com.pattern.strategy.Strategy.Ataque;
+import com.state.Strategy.Ataque;
 
 //	Implementação Ataque
 public class AtaqueMedio extends Ataque {

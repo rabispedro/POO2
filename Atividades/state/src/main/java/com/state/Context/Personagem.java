@@ -1,14 +1,17 @@
-package com.pattern.strategy.Context;
+package com.state.Context;
 
-import com.pattern.strategy.Strategy.Ataque;
-import com.pattern.strategy.Strategy.Corrida;
-import com.pattern.strategy.Strategy.Pulo;
+import com.state.Context.Energia;
+
+import com.state.Strategy.Ataque;
+import com.state.Strategy.Corrida;
+import com.state.Strategy.Pulo;
 
 //	Contexto abstrato
 public abstract class Personagem {
 	private Ataque ataque;
 	private Corrida corrida;
 	private Pulo pulo;
+	private Energia energia;
 
 	public void atacar() {
 		ataque.atacar();
@@ -30,6 +33,14 @@ public abstract class Personagem {
 		this.corrida = corrida;
 	}
 
+	public void setEnergia(Energia energia) {
+		this.energia = energia;
+	}
+
+	public Energia getEnergia() {
+		return energia;
+	}
+
 	public void setPulo(Pulo pulo) {
 		this.pulo = pulo;
 	}	
@@ -37,10 +48,11 @@ public abstract class Personagem {
 	@Override
 	public String toString() {
 		return 
-			"===================\n" + 
-			"PULO: " + this.pulo + 
+			"== Personagem ============" + 
+			"\nENERGIA: " + this.energia + 
+			"\nPULO: " + this.pulo + 
 			"\nATAQUE: " + this.ataque +
 			"\nCORRIDA: " + this.corrida + "\n" +
-			"===================\n\n"; 
+			"==========================\n\n"; 
 	}
 }

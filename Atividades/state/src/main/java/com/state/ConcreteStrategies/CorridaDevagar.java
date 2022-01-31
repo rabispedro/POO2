@@ -1,6 +1,6 @@
-package com.pattern.strategy.ConcreteStrategies;
+package com.state.ConcreteStrategies;
 
-import com.pattern.strategy.Strategy.Corrida;
+import com.state.Strategy.Corrida;
 
 //	Implementação da Corrida
 public class CorridaDevagar extends Corrida {
