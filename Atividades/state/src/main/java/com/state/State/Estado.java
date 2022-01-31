@@ -1,51 +1,52 @@
 package com.state.State;
 
-import com.state.Context.Conta;
+import com.state.Context.Energia;
 
 //	State
 public abstract class Estado {
-	private Conta conta;
-	private double limiteInferior;
-	private double limiteSuperior;
+	private Energia energia;
+	private Integer level;
+	private Integer limiteInferior;
+	private Integer limiteSuperior;
 
-	public Estado(Conta conta) {
-		this.conta = conta;
+	public Estado(Energia energia) {
+		this.energia = energia;
 		setLimites();
 	}
 
 	protected abstract void setLimites();
 
-	public Conta getConta() {
-		return conta;
+	public Energia getEnergia() {
+		return energia;
 	}
 
-	public void setConta(Conta conta) {
-		this.conta = conta;
+	public void setEnergia(Energia energia) {
+		this.energia = energia;
 	}
 
-	public double getLimiteInferior() {
+	public Integer getLimiteInferior() {
 		return limiteInferior;
 	}
 
-	public void setLimiteInferior(double limiteInferior) {
+	public void setLimiteInferior(Integer limiteInferior) {
 		this.limiteInferior = limiteInferior;
 	}
 
-	public double getLimiteSuperior() {
+	public Integer getLimiteSuperior() {
 		return limiteSuperior;
 	}
 
-	public void setLimiteSuperior(double limiteSuperior) {
+	public void setLimiteSuperior(Integer limiteSuperior) {
 		this.limiteSuperior = limiteSuperior;
 	}
 
-	public void depositar(double quantia) {
-		this.conta.setSaldo(this.conta.getSaldo() + quantia);
+	public void aumentar(Integer quantia) {
+		this.energia.setLevel(this.energia.getLevel() + quantia);
 		this.verificarAlteracaoEstado();
 	}
 
-	public void sacar(double quantia) {
-		this.conta.setSaldo(this.conta.getSaldo() - quantia);
+	public void diminuir(Integer quantia) {
+		this.energia.setLevel(this.energia.getLevel() - quantia);
 		this.verificarAlteracaoEstado();
 	}
 
