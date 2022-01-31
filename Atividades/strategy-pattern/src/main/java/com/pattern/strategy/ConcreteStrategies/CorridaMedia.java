@@ -6,6 +6,11 @@ import com.pattern.strategy.Strategy.Corrida;
 public class CorridaMedia extends Corrida {
 	public void correr() {
 		//	Variação Corrida Média
-		System.out.printf("Corrida média.\n");
+		System.out.printf("Corrida Média.\n");
+	}
+
+	@Override
+	public String toString () {
+		return "Corrida Média";
 	}
 }

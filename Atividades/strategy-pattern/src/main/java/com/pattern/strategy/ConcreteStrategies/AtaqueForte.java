@@ -6,6 +6,11 @@ import com.pattern.strategy.Strategy.Ataque;
 public class AtaqueForte extends Ataque {
 	public void atacar() {
 		//	Variação Ataque Forte
-		System.out.printf("Ataque forte.\n");
+		System.out.printf("Ataque Forte.\n");
+	}
+
+	@Override
+	public String toString () {
+		return "Ataque Forte";
 	}
 }

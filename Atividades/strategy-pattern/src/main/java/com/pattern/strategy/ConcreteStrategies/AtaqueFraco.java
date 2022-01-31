@@ -6,6 +6,11 @@ import com.pattern.strategy.Strategy.Ataque;
 public class AtaqueFraco extends Ataque {
 	public void atacar() {
 		//	Variação Ataque Fraco
-		System.out.printf("Ataque fraco.\n");
+		System.out.printf("Ataque Fraco.\n");
+	}
+
+	@Override
+	public String toString () {
+		return "Ataque Fraco";
 	}
 }

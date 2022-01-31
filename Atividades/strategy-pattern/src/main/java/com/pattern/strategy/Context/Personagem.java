@@ -33,4 +33,14 @@ public abstract class Personagem {
 	public void setPulo(Pulo pulo) {
 		this.pulo = pulo;
 	}	
+
+	@Override
+	public String toString() {
+		return 
+			"===================\n" + 
+			"PULO: " + this.pulo + 
+			"\nATAQUE: " + this.ataque +
+			"\nCORRIDA: " + this.corrida + "\n" +
+			"===================\n\n"; 
+	}
 }
