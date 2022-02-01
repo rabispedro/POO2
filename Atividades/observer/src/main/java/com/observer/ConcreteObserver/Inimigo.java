@@ -53,32 +53,3 @@ public class Inimigo extends Observador {
     }
   }
 }
-
-
-// public abstract class Inimigo {
-//   private Integer abscissas; //x
-//   private Integer ordered; //y
-
-//   public void setAbscissas(Integer x) {
-//     abscissas = x;
-//   }
-
-//   public void setOrdered(Integer y) {
-//     ordered = y;
-//   }
-
-//   public Integer getAbscissas() {
-//     return abscissas;
-//   }
-
-//   public Integer getOrdered() {
-//     return ordered;
-//   }
-
-//   public String toString() {
-//     return 
-//       "x: " + abscissas + "\n" +
-//       "y: " + ordered + "\n";
-//   }
-
-// }
