@@ -1,9 +1,9 @@
 package com.observer.app;
 
-import com.observer.ConcreteObservable.Sujeito;
-import com.observer.ConcreteObserver.Inimigo;
+import java.util.Arrays;
 
-import java.utils.*;
+import com.observer.concrete_observable.Sujeito;
+import com.observer.concrete_observer.Inimigo;
 
 /**
 	*	Programação Orientada à Objetos 2 - Atividade 02 (Padrão Observer)
@@ -18,11 +18,13 @@ public class App {
 
 		System.out.printf("PRÁTICA\n\n");
 
-		Sujeito sujeito = new Sujeito(80);
-		Inimigo inimigo01 = new Inimigo(60);
-		Inimigo inimigo02 = new Inimigo(50);
-		Inimigo inimigo03 = new Inimigo(40);
+		Sujeito sujeito = new Sujeito();
+		Inimigo inimigo01 = new Inimigo();
+		Inimigo inimigo02 = new Inimigo();
+		Inimigo inimigo03 = new Inimigo();
+
 		sujeito.subscribe(Arrays.asList(inimigo01, inimigo02, inimigo03));
+
 		System.out.print(sujeito);
 
 		sujeito.setX(10);
@@ -42,7 +44,7 @@ public class App {
 			System.out.print("Inimigo 01: "+ inimigo01);
 			System.out.print("Inimigo 02: "+ inimigo02);
 			System.out.print("Inimigo 03: "+ inimigo03);
-			sujeito.notify();
+			sujeito.notificate();
 		}
 	}
 }
