@@ -4,9 +4,6 @@ import com.state.Context.Energia;
 
 import com.state.State.Estado;
 
-import com.state.ConcreteStates.EstadoPerigo;
-import com.state.ConcreteStates.EstadoForte;
-
 public class EstadoNormal extends Estado {
 	public EstadoNormal(Energia energia) {
 		super(energia);

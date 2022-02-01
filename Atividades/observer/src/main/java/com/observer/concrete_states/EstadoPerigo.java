@@ -1,8 +1,7 @@
-package com.state.ConcreteStates;
+package com.observer.concrete_states;
 
-import com.state.Context.Energia;
-
-import com.state.State.Estado;
+import com.observer.context.Energia;
+import com.observer.state.Estado;
 
 public class EstadoPerigo extends Estado {
 	public EstadoPerigo(Energia energia) {

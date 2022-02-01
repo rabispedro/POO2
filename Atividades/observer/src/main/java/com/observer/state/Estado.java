@@ -1,6 +1,6 @@
-package com.state.State;
+package com.observer.state;
 
-import com.state.Context.Energia;
+import com.observer.context.Energia;
 
 //	State
 public abstract class Estado {

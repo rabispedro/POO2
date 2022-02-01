@@ -1,41 +1,38 @@
-package com.state.ConcreteStates;
+package com.observer.concrete_states;
 
-import com.state.Context.Energia;
+import com.observer.context.Energia;
+import com.observer.state.Estado;
 
-import com.state.State.Estado;
-
-public class EstadoPerigo extends Estado {
-	public EstadoPerigo(Energia energia) {
+//	Concrete State
+public class EstadoForte extends Estado {
+	public EstadoForte(Energia energia) {
 		super(energia);
 	}
-
-	//	Comportamento particular deste estado
+	
 	public void setLimites() {
-		this.setLimiteInferior(1);
-		this.setLimiteSuperior(30);
+		this.setLimiteInferior(71);
+		this.setLimiteSuperior(100);
 	}
-
-	//	Comportamento particular deste estado
+	
 	public void aumentar(Integer quantia) {
 		this.getEnergia().setLevel(this.getEnergia().getLevel() + quantia);
 		this.verificarAlteracaoEstado();
 	}
-
-	//	Comportamento particular deste estado
+	
 	public void diminuir(Integer quantia) {
 		this.getEnergia().setLevel(this.getEnergia().getLevel() - quantia);
 		this.verificarAlteracaoEstado();
 	}
 
-	//	Depositar herdado da superclasse e mantido
-
 	public void verificarAlteracaoEstado() {
-		if(this.getEnergia().getLevel() < this.getLimiteInferior()) {
+		if(this.getEnergia().getLevel() < 0) {
 			this.getEnergia().setEstado(new EstadoMorto(this.getEnergia()));
-		}else if(this.getEnergia().getLevel() > 70) {
-			this.getEnergia().setEstado(new EstadoForte(this.getEnergia()));
-		}else if(this.getEnergia().getLevel() > this.getLimiteSuperior()) {
+		} else if(this.getEnergia().getLevel() < 30) {
+			this.getEnergia().setEstado(new EstadoPerigo(this.getEnergia()));
+		}else if(this.getEnergia().getLevel() < this.getLimiteInferior()) {
 			this.getEnergia().setEstado(new EstadoNormal(this.getEnergia()));
+		}else if(this.getEnergia().getLevel() > this.getLimiteInferior()) {
+			this.getEnergia().setEstado(new EstadoForte(this.getEnergia()));
 		}else if(this.getEnergia().getLevel() > 100) {
 			this.diminuir(this.getEnergia().getLevel() - 100);
 			this.getEnergia().setEstado(new EstadoForte(this.getEnergia()));
@@ -43,6 +40,6 @@ public class EstadoPerigo extends Estado {
 	}
 
 	public String toString() {
-		return "Estado Perigo";
+		return "Estado Forte";
 	}
 }

@@ -1,8 +1,8 @@
-package com.state.Context;
+package com.observer.context;
 
-import com.state.Strategy.Ataque;
-import com.state.Strategy.Corrida;
-import com.state.Strategy.Pulo;
+import com.observer.strategy.Ataque;
+import com.observer.strategy.Corrida;
+import com.observer.strategy.Pulo;
 
 //	Contexto abstrato
 public abstract class Personagem {
@@ -10,6 +10,24 @@ public abstract class Personagem {
 	private Corrida corrida;
 	private Pulo pulo;
 	private Energia energia;
+	private Integer x;
+	private Integer y;
+
+	public Integer getX() {
+    return this.x;
+  }
+
+  public Integer getY() {
+    return this.y;
+  }
+
+  public void setX(Integer x) {
+    this.x = x;
+  }
+
+  public void setY(Integer y) {
+    this.y = y;
+  }
 
 	public void atacar() {
 		ataque.atacar();
@@ -27,8 +45,16 @@ public abstract class Personagem {
 		this.ataque = ataque;
 	}
 
+	public Ataque getAtaque() {
+		return this.ataque;
+	}
+
 	public void setCorrida(Corrida corrida) {
 		this.corrida = corrida;
+	}
+
+	public Corrida getCorrida() {
+		return this.corrida;
 	}
 
 	public void setEnergia(Energia energia) {
@@ -41,6 +67,10 @@ public abstract class Personagem {
 
 	public void setPulo(Pulo pulo) {
 		this.pulo = pulo;
+	}	
+
+	public Pulo getPulo() {
+		return this.pulo;
 	}	
 
 	@Override
